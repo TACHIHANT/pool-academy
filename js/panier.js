@@ -34,7 +34,7 @@ function getProductDetails(productId) {
   return produits.find(p => p.id === productId);
 }
 
-const PAYPAL_EMAIL = 'tachihante25@gmail.com';
+const PAYPAL_CLIENT_ID = 'EGcave_gW-P5xD1eCyfD0XvT_gAUPiPWjyOHfSSO6bHGW6m1miXS2JMl1c51TVus4NUBbpXtwxUt0UCR';
 
 function getCartTotal(cart) {
   return cart.reduce((sum, item) => {
@@ -98,9 +98,7 @@ function renderCartPage() {
           <span>Total</span>
           <span>${total.toFixed(2)} €</span>
         </div>
-        <a id="paypal-checkout-btn" class="btn btn-success btn-block" style="margin-top:1rem;" target="_blank">
-          <i class="fab fa-paypal"></i> Payer avec PayPal
-        </a>
+        <div id="paypal-button-container" style="margin-top:1rem;"></div>
         <p style="font-size:0.8rem;color:#94a3b8;text-align:center;margin-top:0.5rem;">
           Paiement sécurisé PayPal • Téléchargement immédiat
         </p>
@@ -112,14 +110,40 @@ function renderCartPage() {
 }
 
 function setupPayPalButton(total) {
-  const btn = document.getElementById('paypal-checkout-btn');
-  if (!btn) return;
+  const container = document.getElementById('paypal-button-container');
+  if (!container) return;
+  container.innerHTML = '';
+  if (typeof paypal === 'undefined') return;
+
   const cart = getCart();
-  const desc = cart.map(i => {
-    const p = getProductDetails(i.id);
-    return p ? `${p.titre} x${i.qty}` : '';
-  }).join(', ');
-  const siteUrl = window.location.origin + window.location.pathname.replace('panier.html','') + 'merci.html';
-  const url = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${encodeURIComponent(PAYPAL_EMAIL)}&item_name=Pool+Academy+-+Ebooks+Piscine&item_number=${encodeURIComponent(desc)}&amount=${total.toFixed(2)}&currency_code=EUR&return=${encodeURIComponent(siteUrl)}&cancel_return=${encodeURIComponent(window.location.href)}&notify_url=&bn=PP-BuyNowBF`;
-  btn.href = url;
+
+  paypal.Buttons({
+    style: { color: 'gold', shape: 'rect', layout: 'vertical', label: 'paypal' },
+    createOrder: function(data, actions) {
+      const items = cart.map(i => {
+        const p = getProductDetails(i.id);
+        return p ? { name: p.titre, unit_amount: { value: p.prix.toFixed(2), currency_code: 'EUR' }, quantity: i.qty } : null;
+      }).filter(Boolean);
+      return actions.order.create({
+        purchase_units: [{
+          description: 'Pool Academy - Ebooks Piscine',
+          amount: { value: total.toFixed(2), currency_code: 'EUR', breakdown: { item_total: { value: total.toFixed(2), currency_code: 'EUR' } } },
+          items: items
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        fbq('track', 'Purchase', { value: total.toFixed(2), currency: 'EUR' });
+        localStorage.removeItem('pool-cart');
+        window.location.href = 'merci.html';
+      });
+    },
+    onCancel: function() {
+      showNotification('Paiement annulé', 'error');
+    },
+    onError: function(err) {
+      showNotification('Erreur de paiement', 'error');
+    }
+  }).render('#paypal-button-container');
 }
