@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '23894507743520636');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=23894507743520636&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Pool Academy</title>
+  <meta property="og:title" content="Contact — Pool Academy">
+  <meta property="og:description" content="Une question sur nos ebooks ? Contactez Pool Academy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://web.facebook.com/profile.php?id=61576340156579">
+  <meta property="og:image" content="images/hero.svg">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" href="images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo"><i class="fas fa-water"></i> Pool Academy</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Ebooks</a>
+        <a href="a-propos.html">A propos</a>
+        <a href="contact.html">Contact</a>
+        <button class="cart-btn" onclick="window.location='panier.html'">
+          <i class="fas fa-shopping-cart"></i> <span class="cart-count" style="display:none;">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container" style="max-width:700px;">
+      <h2 class="text-center">Contactez-nous</h2>
+      <p class="text-center text-muted" style="margin-bottom:2rem;">Une question sur nos ebooks ? Besoin d'un conseil pour votre piscine ? Écrivez-nous !</p>
+      <form class="contact-form" action="https://formspree.io/f/your-email" method="POST">
+        <div class="form-group">
+          <label for="nom">Nom complet</label>
+          <input type="text" id="nom" name="nom" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="sujet">Sujet</label>
+          <select id="sujet" name="sujet">
+            <option>Question sur un ebook</option>
+            <option>Problème de téléchargement</option>
+            <option>Demande d'information</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-blue btn-block"><i class="fas fa-paper-plane"></i> Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Pool Academy</h4>
+          <p style="font-size:0.9rem;">Des guides PDF experts pour l'entretien et le traitement de votre piscine.</p>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <a href="produits.html">Nos ebooks</a>
+          <a href="a-propos.html">A propos</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://web.facebook.com/profile.php?id=61576340156579" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+        <div>
+          <h4>Paiement sécurisé</h4>
+          <p style="font-size:0.9rem;"><i class="fab fa-paypal"></i> Paiement sécurisé via PayPal. Téléchargement immédiat.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Pool Academy. Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

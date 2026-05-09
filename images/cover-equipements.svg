@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b45309"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#fff;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="560" rx="16" fill="url(#g1)"/>
+  <rect x="20" y="20" width="360" height="520" rx="12" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <rect x="0" y="0" width="400" height="200" rx="16" fill="url(#g2)"/>
+  <circle cx="200" cy="90" r="45" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3"/>
+  <circle cx="200" cy="90" r="25" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <path d="M200 65 L200 115 M175 90 L225 90" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="200" cy="90" r="6" fill="#fde68a"/>
+  <rect x="175" y="140" width="50" height="35" rx="4" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <rect x="185" y="145" width="8" height="8" rx="2" fill="rgba(255,255,255,0.3)"/>
+  <rect x="200" y="145" width="8" height="8" rx="2" fill="rgba(255,255,255,0.3)"/>
+  <text x="200" y="260" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="bold">Guide des</text>
+  <text x="200" y="292" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="bold">Équipements</text>
+  <text x="200" y="324" text-anchor="middle" fill="#fcd34d" font-family="Arial,sans-serif" font-size="14">de Piscine</text>
+  <line x1="120" y1="350" x2="280" y2="350" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <text x="200" y="380" text-anchor="middle" fill="#fde68a" font-family="Arial,sans-serif" font-size="11">Pompe · Filtre · Chauffage</text>
+  <text x="200" y="400" text-anchor="middle" fill="#fde68a" font-family="Arial,sans-serif" font-size="11">Robot · Électrolyse · Éclairage</text>
+  <rect x="150" y="430" width="100" height="30" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="200" y="450" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="12" font-weight="bold">PDF — 40 Pages</text>
+  <text x="200" y="500" text-anchor="middle" fill="#fcd34d" font-family="Arial,sans-serif" font-size="10">Pool Academy</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <defs>
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c4a6e"/>
+      <stop offset="50%" style="stop-color:#0284c7"/>
+      <stop offset="100%" style="stop-color:#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:0.08"/>
+      <stop offset="50%" style="stop-color:#fff;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#fff;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="url(#hero-bg)"/>
+  <g transform="translate(850,120)">
+    <rect x="-120" y="-60" width="240" height="240" rx="20" fill="rgba(255,255,255,0.06)"/>
+    <rect x="-100" y="-40" width="200" height="200" rx="16" fill="rgba(255,255,255,0.08)"/>
+    <rect x="-80" y="-20" width="160" height="160" rx="12" fill="rgba(255,255,255,0.1)"/>
+    <rect x="-60" y="0" width="120" height="120" rx="10" fill="rgba(255,255,255,0.12)"/>
+    <text x="0" y="75" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="40">📖</text>
+  </g>
+  <g transform="translate(80,60)">
+    <text x="0" y="50" fill="#fff" font-family="Arial,sans-serif" font-size="16" font-weight="bold" opacity="0.8">Pool Academy</text>
+    <circle cx="55" cy="-5" r="20" fill="rgba(255,255,255,0.1)"/>
+    <path d="M45 0 Q55 -15 65 0" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  </g>
+  <g transform="translate(150,380)">
+    <path d="M0 0 Q50 -20 100 0 Q150 20 200 0 Q250 -20 300 0 Q350 20 400 0 Q450 -20 500 0 Q550 20 600 0 Q650 -20 700 0 Q750 20 800 0 Q850 -20 900 0" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+    <path d="M0 15 Q60 5 120 15 Q180 25 240 15 Q300 5 360 15 Q420 25 480 15 Q540 5 600 15 Q660 25 720 15 Q780 5 840 15 Q900 25 960 15" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  </g>
+  <g transform="translate(120,200)">
+    <rect x="0" y="0" width="180" height="250" rx="8" fill="rgba(255,255,255,0.06)" transform="rotate(-8)"/>
+    <rect x="5" y="5" width="170" height="240" rx="6" fill="rgba(255,255,255,0.05)" transform="rotate(-8)"/>
+  </g>
+  <g transform="translate(160,185)">
+    <rect x="0" y="0" width="180" height="250" rx="8" fill="rgba(255,255,255,0.08)"/>
+    <rect x="5" y="5" width="170" height="240" rx="6" fill="rgba(255,255,255,0.06)"/>
+    <rect x="20" y="20" width="130" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+    <rect x="20" y="40" width="100" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+    <rect x="20" y="60" width="80" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
+    <rect x="20" y="90" width="130" height="120" rx="4" fill="rgba(255,255,255,0.05)"/>
+    <rect x="50" y="230" width="80" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  </g>
+  <g transform="translate(460,160)">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="15" fill="rgba(255,255,255,0.08)"/>
+    <text x="0" y="5" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="16">✓</text>
+    <text x="45" y="5" fill="#fff" font-family="Arial,sans-serif" font-size="13">Expertise professionnelle</text>
+    <circle cx="0" cy="45" r="15" fill="rgba(255,255,255,0.08)"/>
+    <text x="0" y="50" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="16">✓</text>
+    <text x="45" y="50" fill="#fff" font-family="Arial,sans-serif" font-size="13">Téléchargement immédiat</text>
+    <circle cx="0" cy="90" r="15" fill="rgba(255,255,255,0.08)"/>
+    <text x="0" y="95" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="16">✓</text>
+    <text x="45" y="95" fill="#fff" font-family="Arial,sans-serif" font-size="13">Mis à jour régulièrement</text>
+  </g>
+</svg>
