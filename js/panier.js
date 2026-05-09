@@ -34,7 +34,7 @@ function getProductDetails(productId) {
   return produits.find(p => p.id === productId);
 }
 
-const PAYPAL_CLIENT_ID = 'EGcave_gW-P5xD1eCyfD0XvT_gAUPiPWjyOHfSSO6bHGW6m1miXS2JMl1c51TVus4NUBbpXtwxUt0UCR';
+const PAYPAL_CLIENT_ID = 'AY9HXafcPHStF8HwHiwdJ1OyRDSC739naTxvTnA_PbjIZXa4hF2Acb3735u7zgST8zok7jCcaMBkKtQN';
 
 function getCartTotal(cart) {
   return cart.reduce((sum, item) => {
