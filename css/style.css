@@ -83,6 +83,8 @@ header {
 .btn-blue:hover { background: #0284c7; transform: translateY(-1px); }
 .btn-success { background: #10b981; color: #fff; }
 .btn-success:hover { background: #059669; }
+.btn-amazon { background: #ffd814; color: #111; }
+.btn-amazon:hover { background: #f7ca00; transform: translateY(-1px); }
 .btn-sm { padding: 0.5rem 1rem; font-size: 0.85rem; }
 .btn-block { width: 100%; justify-content: center; }
 
