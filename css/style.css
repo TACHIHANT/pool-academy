@@ -62,7 +62,7 @@ header {
 
 /* === HERO === */
 .hero {
-  background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 50%, #0ea5e9 100%);
+  background: linear-gradient(135deg, rgba(12,74,110,0.85) 0%, rgba(2,132,199,0.75) 50%, rgba(14,165,233,0.7) 100%), url('../images/pool-hero.jpg') center/cover no-repeat;
   color: #fff; padding: 6rem 0; text-align: center;
 }
 .hero h1 { font-size: 3rem; color: #fff; margin-bottom: 1rem; }
