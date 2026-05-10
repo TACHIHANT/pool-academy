@@ -56,12 +56,7 @@
       <h1>Merci pour votre achat !</h1>
       <p style="font-size:1.1rem;margin:1.5rem 0;">Votre paiement PayPal a bien été reçu.</p>
       <p style="margin-bottom:2rem;">Vos ebooks sont disponibles ici :</p>
-      <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
-        <a href="ebooks/guide-traitement-piscine/guide-traitement-piscine.pdf" class="btn btn-outline" style="border-color:#0ea5e9;color:#0ea5e9;justify-content:center;" target="_blank"><i class="fas fa-download"></i> Guide Traitement</a>
-        <a href="ebooks/solutions-problemes-piscine/solutions-problemes-piscine.pdf" class="btn btn-outline" style="border-color:#0ea5e9;color:#0ea5e9;justify-content:center;" target="_blank"><i class="fas fa-download"></i> Solutions Problèmes</a>
-        <a href="ebooks/entretien-saisonnier-piscine/entretien-saisonnier-piscine.pdf" class="btn btn-outline" style="border-color:#0ea5e9;color:#0ea5e9;justify-content:center;" target="_blank"><i class="fas fa-download"></i> Entretien Saisonnier</a>
-        <a href="ebooks/guide-equipements-piscine/guide-equipements-piscine.pdf" class="btn btn-outline" style="border-color:#0ea5e9;color:#0ea5e9;justify-content:center;" target="_blank"><i class="fas fa-download"></i> Guide Équipements</a>
-      </div>
+      <div id="download-links" style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;"></div>
       <a href="index.html" class="btn btn-blue">Continuer mes achats</a>
     </div>
   </section>
@@ -94,10 +89,20 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/produits.js"></script>
   <script>
-    fbq('track', 'Purchase', {currency: 'EUR', value: 0});
+    const purchased = JSON.parse(localStorage.getItem('pool-purchased') || '[]');
     localStorage.removeItem('pool-cart');
+    localStorage.removeItem('pool-purchased');
     updateCartCount([]);
+    const container = document.getElementById('download-links');
+    if (container && purchased.length) {
+      container.innerHTML = purchased.map(id => {
+        const p = getProductById(id);
+        if (!p) return '';
+        return `<a href="ebooks/${p.slug}/${p.slug}.pdf" class="btn btn-outline" style="border-color:#0ea5e9;color:#0ea5e9;justify-content:center;" target="_blank"><i class="fas fa-download"></i> ${p.titre}</a>`;
+      }).join('');
+    }
   </script>
 </body>
 </html>

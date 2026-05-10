@@ -135,6 +135,7 @@ function setupPayPalButton(total) {
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
         fbq('track', 'Purchase', { value: total.toFixed(2), currency: 'EUR' });
+        localStorage.setItem('pool-purchased', JSON.stringify(cart.map(i => i.id)));
         localStorage.removeItem('pool-cart');
         window.location.href = 'merci.html';
       });
