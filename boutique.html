@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique — Pool Academy</title>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','23894507743520636');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=23894507743520636&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Boutique Piscine — Pool Academy">
+  <meta property="og:description" content="Équipements et accessoires piscine recommandés sur Amazon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://web.facebook.com/profile.php?id=61576340156579">
+  <meta property="og:image" content="images/hero.svg">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" href="images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo"><i class="fas fa-water"></i> Pool Academy</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Ebooks</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="a-propos.html">A propos</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://web.facebook.com/profile.php?id=61576340156579" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook" style="font-size:1.2rem;"></i></a>
+        <button class="cart-btn" onclick="window.location='panier.html'">
+          <i class="fas fa-shopping-cart"></i> <span class="cart-count" style="display:none;">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2>Boutique Piscine</h2>
+      <p class="text-muted" style="margin-bottom:2rem;">Équipements, produits d'entretien et accessoires sélectionnés pour vous sur Amazon.</p>
+
+      <div class="filters" id="shop-filters">
+        <button class="filter-btn active" data-cat="tous">Tous</button>
+        <button class="filter-btn" data-cat="traitement">Traitement</button>
+        <button class="filter-btn" data-cat="equipement">Équipement</button>
+        <button class="filter-btn" data-cat="entretien">Entretien</button>
+        <button class="filter-btn" data-cat="hivernage">Hivernage</button>
+      </div>
+
+      <div class="products-grid" id="shop-grid">
+        <div class="product-card">
+          <img class="product-card-img" src="images/cover-traitement.svg" alt="Testeur pH" style="padding:2rem;object-fit:contain;background:#f0f9ff;">
+          <div class="product-card-body">
+            <span class="badge">Amazon</span>
+            <h3>Testeur pH électronique</h3>
+            <p class="desc">Mesure précise du pH et de la température de l'eau.</p>
+            <div class="price">À partir de 19.99 €</div>
+            <a href="https://www.amazon.fr/s?k=testeur+ph+piscine+electronique&tag=poolacademy-21" target="_blank" rel="nofollow sponsored" class="btn btn-blue btn-sm btn-block"><i class="fab fa-amazon"></i> Voir sur Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img class="product-card-img" src="images/cover-traitement.svg" alt="Chlore" style="padding:2rem;object-fit:contain;background:#f0f9ff;">
+          <div class="product-card-body">
+            <span class="badge">Amazon</span>
+            <h3>Pastilles Chlore Piscine</h3>
+            <p class="desc">Traitement au chlore lent, idéal pour une désinfection continue.</p>
+            <div class="price">À partir de 24.99 €</div>
+            <a href="https://www.amazon.fr/s?k=chlore+piscine+pastille+lent&tag=poolacademy-21" target="_blank" rel="nofollow sponsored" class="btn btn-blue btn-sm btn-block"><i class="fab fa-amazon"></i> Voir sur Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img class="product-card-img" src="images/cover-traitement.svg" alt="Algicide" style="padding:2rem;object-fit:contain;background:#f0f9ff;">
+          <div class="product-card-body">
+            <span class="badge">Amazon</span>
+            <h3>Algicide Piscine</h3>
+            <p class="desc">Prévient et élimine les algues vertes, jaunes et noires.</p>
+            <div class="price">À partir de 14.99 €</div>
+            <a href="https://www.amazon.fr/s?k=algicide+piscine+concentre&tag=poolacademy-21" target="_blank" rel="nofollow sponsored" class="btn btn-blue btn-sm btn-block"><i class="fab fa-amazon"></i> Voir sur Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img class="product-card-img" src="images/cover-equipements.svg" alt="Robot Piscine" style="padding:2rem;object-fit:contain;background:#f0f9ff;">
+          <div class="product-card-body">
+            <span class="badge">Amazon</span>
+            <h3>Robot Piscine Électrique</h3>
+            <p class="desc">Nettoie le fond, les parois et la ligne d'eau automatiquement.</p>
+            <div class="price">À partir de 299 €</div>
+            <a href="https://www.amazon.fr/s?k=robot+piscine+electrique+automatique&tag=poolacademy-21" target="_blank" rel="nofollow sponsored" class="btn btn-blue btn-sm btn-block"><i class="fab fa-amazon"></i> Voir sur Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img class="product-card-img" src="images/cover-equipements.svg" alt="Pompe" style="padding:2rem;object-fit:contain;background:#f0f9ff;">
+          <div class="product-card-body">
+            <span class="badge">Amazon</span>
+            <h3>Pompe Filtration Piscine</h3>
+            <p class="desc">Pompe performante pour une filtration efficace de votre bassin.</p>
+            <div class="price">À partir de 89.99 €</div>
+            <a href="https://www.amazon.fr/s?k=pompe+filtration+piscine+sable&tag=poolacademy-21" target="_blank" rel="nofollow sponsored" class="btn btn-blue btn-sm btn-block"><i class="fab fa-amazon"></i> Voir sur Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img class="product-card-img" src="images/cover-equipements.svg" alt="Épuisette" style="padding:2rem;object-fit:contain;background:#f0f9ff;">
+          <div class="product-card-body">
+            <span class="badge">Amazon</span>
+            <h3>Épuisette Piscine Pro</h3>
+            <p class="desc">Épuisette grande surface pour feuilles et débris.</p>
+            <div class="price">À partir de 12.99 €</div>
+            <a href="https://www.amazon.fr/s?k=epervier+piscine+professionnel+grand+modele&tag=poolacademy-21" target="_blank" rel="nofollow sponsored" class="btn btn-blue btn-sm btn-block"><i class="fab fa-amazon"></i> Voir sur Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img class="product-card-img" src="images/cover-saisonnier.svg" alt="Bâche" style="padding:2rem;object-fit:contain;background:#f0f9ff;">
+          <div class="product-card-body">
+            <span class="badge">Amazon</span>
+            <h3>Bâche Hivernage Piscine</h3>
+            <p class="desc">Protège votre piscine pendant l'hiver contre les intempéries.</p>
+            <div class="price">À partir de 34.99 €</div>
+            <a href="https://www.amazon.fr/s?k=bache+hivernage+piscine+renforcee&tag=poolacademy-21" target="_blank" rel="nofollow sponsored" class="btn btn-blue btn-sm btn-block"><i class="fab fa-amazon"></i> Voir sur Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img class="product-card-img" src="images/cover-saisonnier.svg" alt="Flotteur" style="padding:2rem;object-fit:contain;background:#f0f9ff;">
+          <div class="product-card-body">
+            <span class="badge">Amazon</span>
+            <h3>Flotteur Hivernage</h3>
+            <p class="desc">Absorbe la pression de la glace et protège les parois.</p>
+            <div class="price">À partir de 9.99 €</div>
+            <a href="https://www.amazon.fr/s?k=flotteur+hivernage+piscine+bidon&tag=poolacademy-21" target="_blank" rel="nofollow sponsored" class="btn btn-blue btn-sm btn-block"><i class="fab fa-amazon"></i> Voir sur Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:2rem;padding:1rem;background:#f0f9ff;border-radius:12px;font-size:0.85rem;color:#64748b;">
+        <i class="fas fa-info-circle"></i> Liens partenaires Amazon. Les prix sont indicatifs et peuvent varier.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Pool Academy</h4>
+          <p style="font-size:0.9rem;">Des guides PDF experts pour l'entretien et le traitement de votre piscine.</p>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <a href="produits.html">Nos ebooks</a>
+          <a href="boutique.html">Boutique</a>
+          <a href="a-propos.html">A propos</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://web.facebook.com/profile.php?id=61576340156579" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+        <div>
+          <h4>Catégories</h4>
+          <a href="boutique.html?cat=traitement">Traitement</a>
+          <a href="boutique.html?cat=equipement">Équipement</a>
+          <a href="boutique.html?cat=saisonnier">Saisonnier</a>
+          <a href="boutique.html?cat=hivernage">Hivernage</a>
+        </div>
+        <div>
+          <h4>Paiement sécurisé</h4>
+          <p style="font-size:0.9rem;"><i class="fab fa-paypal"></i> Paiement sécurisé via PayPal. Téléchargement immédiat.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Pool Academy. Tous droits réservés. |
+        <span style="font-size:0.75rem;">Liens partenaires Amazon (poolacademy-21)</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/produits.js"></script>
+  <script src="js/panier.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('shop-grid');
+      const cards = grid.querySelectorAll('.product-card');
+      const params = new URLSearchParams(window.location.search);
+      let activeCat = params.get('cat') || 'tous';
+
+      document.querySelectorAll('#shop-filters .filter-btn').forEach(btn => {
+        if (btn.dataset.cat === activeCat) btn.classList.add('active');
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#shop-filters .filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCat = btn.dataset.cat;
+          cards.forEach(card => {
+            card.style.display = 'none';
+            const cats = ['traitement', 'equipement', 'entretien', 'hivernage'];
+            const idx = Array.from(cards).indexOf(card);
+            const catMap = ['tous','traitement','traitement','traitement','equipement','equipement','equipement','hivernage','hivernage'];
+            if (activeCat === 'tous' || catMap[idx] === activeCat) card.style.display = '';
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
