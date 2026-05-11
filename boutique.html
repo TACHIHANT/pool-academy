@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boutique — Pool Academy</title>
   <!-- Meta Pixel Code -->
   <script>
@@ -70,7 +68,7 @@
       </div>
 
       <div class="products-grid" id="shop-grid">
-        <div class="product-card">
+        <div class="product-card" data-cat="traitement">
           <div class="product-card-body">
             <span class="badge">Amazon</span>
             <h3>Testeur pH électronique</h3>
@@ -80,7 +78,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-cat="traitement">
           <div class="product-card-body">
             <span class="badge">Amazon</span>
             <h3>Pastilles Chlore Piscine</h3>
@@ -90,7 +88,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-cat="traitement">
           <div class="product-card-body">
             <span class="badge">Amazon</span>
             <h3>Algicide Piscine</h3>
@@ -100,7 +98,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-cat="equipement">
           <div class="product-card-body">
             <span class="badge">Amazon</span>
             <h3>Robot Piscine Électrique</h3>
@@ -110,7 +108,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-cat="equipement">
           <div class="product-card-body">
             <span class="badge">Amazon</span>
             <h3>Pompe Filtration Piscine</h3>
@@ -120,7 +118,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-cat="entretien">
           <div class="product-card-body">
             <span class="badge">Amazon</span>
             <h3>Épuisette Piscine Pro</h3>
@@ -130,7 +128,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-cat="hivernage">
           <div class="product-card-body">
             <span class="badge">Amazon</span>
             <h3>Bâche Hivernage Piscine</h3>
@@ -140,7 +138,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-cat="hivernage">
           <div class="product-card-body">
             <span class="badge">Amazon</span>
             <h3>Flotteur Hivernage</h3>
@@ -253,21 +251,23 @@
       const params = new URLSearchParams(window.location.search);
       let activeCat = params.get('cat') || 'tous';
 
+      function filterShop(cat) {
+        cards.forEach(card => {
+          card.style.display = (cat === 'tous' || card.dataset.cat === cat) ? '' : 'none';
+        });
+      }
+
       document.querySelectorAll('#shop-filters .filter-btn').forEach(btn => {
         if (btn.dataset.cat === activeCat) btn.classList.add('active');
         btn.addEventListener('click', () => {
           document.querySelectorAll('#shop-filters .filter-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           activeCat = btn.dataset.cat;
-          cards.forEach(card => {
-            card.style.display = 'none';
-            const cats = ['traitement', 'equipement', 'entretien', 'hivernage'];
-            const idx = Array.from(cards).indexOf(card);
-            const catMap = ['tous','traitement','traitement','traitement','equipement','equipement','equipement','hivernage','hivernage','entretien','entretien','equipement','entretien'];
-            if (activeCat === 'tous' || catMap[idx] === activeCat) card.style.display = '';
-          });
+          filterShop(activeCat);
         });
       });
+
+      filterShop(activeCat);
     });
   </script>
 </body>
