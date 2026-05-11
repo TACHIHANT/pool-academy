@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tachihant.github.io/pool-academy/sitemap.xml
