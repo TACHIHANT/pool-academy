@@ -41,6 +41,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.title = `${product.titre} — Pool Academy`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', product.description + ' Téléchargez le guide PDF complet dès maintenant.');
+  const productSchema = document.createElement('script');
+  productSchema.type = 'application/ld+json';
+  productSchema.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.titre,
+    "description": product.description,
+    "image": "https://tachihant.github.io/pool-academy/" + product.image,
+    "offers": { "@type": "Offer", "price": product.prix.toFixed(2), "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+  });
+  document.head.appendChild(productSchema);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = 'https://tachihant.github.io/pool-academy/produit.html?id=' + product.id;
   if (typeof fbq !== 'undefined') {
     fbq('track', 'ViewContent', {content_name: product.titre, content_ids: [product.id], content_type: 'product', value: product.prix, currency: 'EUR'});
   }
