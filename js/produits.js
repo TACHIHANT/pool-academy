@@ -102,6 +102,32 @@ const produits = [
       'Maintenance et remplacement des équipements',
       'Budget et guide d\'achat'
     ]
+  },
+  {
+    id: 5,
+    titre: 'Guide Complet de la Piscine au Sel et de l\'Électrolyseur',
+    slug: 'guide-piscine-sel-electrolyseur',
+    description: 'Maîtrisez la désinfection au sel de votre piscine : choix de l\'électrolyseur, installation, réglages de production de chlore, niveaux d\'eau recommandés, détartrage de la cellule, dépannage des codes défaut, hivernage, et budget — un guide complet pour profiter d\'une eau douce et cristalline toute l\'année.',
+    prix: 13.99,
+    badge: 'Nouveau',
+    couleur: '#9333ea',
+    image: 'images/cover-sel.svg',
+    icone: 'fas fa-gem',
+    categorie: 'equipement',
+    pages: 38,
+    format: 'PDF',
+    toc: [
+      'Qu\'est-ce qu\'une piscine au sel ?',
+      'Avantages et inconvénients',
+      'Choisir son électrolyseur',
+      'Installation et mise en service',
+      'Réglages et paramétrage',
+      'Niveaux d\'eau recommandés',
+      'Entretien de la cellule d\'électrolyse',
+      'Problèmes courants et solutions',
+      'Hivernage d\'une piscine au sel',
+      'Budget et retour sur investissement'
+    ]
   }
 ];
 

@@ -8,7 +8,8 @@ $ebooks = @(
   @{ Name = "solutions-problemes-piscine";    File = "solutions-problemes-piscine.pdf" },
   @{ Name = "entretien-saisonnier-piscine";   File = "entretien-saisonnier-piscine.pdf" },
   @{ Name = "guide-equipements-piscine";      File = "guide-equipements-piscine.pdf" },
-  @{ Name = "5-erreurs-piscine";              File = "5-erreurs-piscine.pdf" }
+  @{ Name = "5-erreurs-piscine";              File = "5-erreurs-piscine.pdf" },
+  @{ Name = "guide-piscine-sel-electrolyseur"; File = "guide-piscine-sel-electrolyseur.pdf" }
 )
 
 if (-not $EdgePath) {
