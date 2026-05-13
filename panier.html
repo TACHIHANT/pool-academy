@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panier — Pool Academy</title>
+<!--HEAD-->
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -23,6 +21,13 @@
   <!-- End Meta Pixel Code -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="google-site-verification" content="BaatDhjvEWrb-0un9ERgAOGnwU-pVGz27R69-_0KOtA" />
+
+<!--END-HEAD-->
+  <title>Panier — Pool Academy</title>
   <title>Panier — Pool Academy</title>
   <meta property="og:title" content="Panier — Pool Academy">
   <meta property="og:description" content="Votre panier d'achat de guides PDF pour piscine.">
@@ -30,9 +35,6 @@
   <meta property="og:url" content="https://tachihant.github.io/pool-academy/panier.html">
   <meta property="og:image" content="https://tachihant.github.io/pool-academy/images/pool-hero.jpg">
   <meta property="og:locale" content="fr_FR">
-  <link rel="icon" href="images/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,9 +49,9 @@
   }
   </script>
   <script src="https://www.paypal.com/sdk/js?client-id=AY9HXafcPHStF8HwHiwdJ1OyRDSC739naTxvTnA_PbjIZXa4hF2Acb3735u7zgST8zok7jCcaMBkKtQN&currency=EUR" defer></script>
-  <meta name="google-site-verification" content="BaatDhjvEWrb-0un9ERgAOGnwU-pVGz27R69-_0KOtA" />
 </head>
 <body>
+<!--HEADER-->
   <header>
     <div class="container navbar">
       <a href="index.html" class="logo"><i class="fas fa-water"></i> Pool Academy</a>
@@ -70,6 +72,8 @@
     </div>
   </header>
 
+<!--END-HEADER-->
+
   <section class="section">
     <div class="container" id="cart-container">
       <div class="cart-empty">
@@ -81,6 +85,7 @@
     </div>
   </section>
 
+<!--SHARE-BAR-->
   <div class="text-center" style="padding:1.5rem 0;background:#f8fafc;border-top:1px solid #e2e8f0;">
     <div class="container">
       <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'facebook-share','width=580,height=400');return false;" class="btn btn-sm" style="border:1px solid #1877f2;color:#1877f2;background:transparent;"><i class="fab fa-facebook"></i> Facebook</a>
@@ -90,6 +95,9 @@
     </div>
   </div>
 
+<!--END-SHARE-BAR-->
+
+<!--FOOTER-->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -108,13 +116,6 @@
 <a href="https://www.instagram.com/experctconseil/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
         </div>
         <div>
-          <h4>Catégories</h4>
-          <a href="produits.html?categorie=traitement">Traitement</a>
-          <a href="produits.html?categorie=problemes">Problèmes</a>
-          <a href="produits.html?categorie=saisonnier">Saisonnier</a>
-          <a href="produits.html?categorie=equipement">Équipement</a>
-        </div>
-        <div>
           <h4>Paiement sécurisé</h4>
           <p style="font-size:0.9rem;"><i class="fab fa-paypal"></i> Paiement sécurisé via PayPal. Téléchargement immédiat.</p>
         </div>
@@ -126,10 +127,15 @@
     </div>
   </footer>
 
+<!--END-FOOTER-->
+
+<!--SCRIPTS-->
+  <script src="js/config.js"></script>
   <script src="js/main.js"></script>
   <script src="js/produits.js"></script>
-  <script src="js/panier.js"></script>
   <script src="js/network.js"></script>
+
+<!--END-SCRIPTS-->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       renderCartPage();

@@ -135,9 +135,31 @@ function setupPayPalButton(total) {
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
         fbq('track', 'Purchase', { value: total.toFixed(2), currency: 'EUR' });
-        localStorage.setItem('pool-purchased', JSON.stringify(cart.map(i => i.id)));
-        localStorage.removeItem('pool-cart');
-        window.location.href = 'merci.html';
+        var apiUrl = typeof BACKEND_URL !== 'undefined' ? BACKEND_URL : '';
+        if (apiUrl) {
+          return fetch(apiUrl + '/api/verify-order', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ orderId: details.id }),
+          }).then(function(r) { return r.json(); }).then(function(result) {
+            if (result.token) {
+              localStorage.setItem('pool-token', result.token);
+              localStorage.setItem('pool-purchased', JSON.stringify(result.productIds));
+            } else {
+              localStorage.setItem('pool-purchased', JSON.stringify(cart.map(i => i.id)));
+            }
+            localStorage.removeItem('pool-cart');
+            window.location.href = 'merci.html' + (result.token ? '?token=' + result.token : '');
+          }).catch(function() {
+            localStorage.setItem('pool-purchased', JSON.stringify(cart.map(i => i.id)));
+            localStorage.removeItem('pool-cart');
+            window.location.href = 'merci.html';
+          });
+        } else {
+          localStorage.setItem('pool-purchased', JSON.stringify(cart.map(i => i.id)));
+          localStorage.removeItem('pool-cart');
+          window.location.href = 'merci.html';
+        }
       });
     },
     onCancel: function() {

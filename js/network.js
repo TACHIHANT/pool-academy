@@ -1,5 +1,6 @@
 (function() {
   if (localStorage.getItem('pool-lead-shown')) return;
+  if (window.location.pathname.includes('free-guide.html')) return;
   const overlay = document.createElement('div');
   overlay.id = 'lead-overlay';
   overlay.innerHTML = '<div class="lead-modal"><button class="lead-close" onclick="closeLead()">&times;</button><div class="lead-content"><i class="fas fa-gift" style="font-size:3rem;color:#0ea5e9;margin-bottom:1rem;"></i><h3>Recevez votre guide gratuit</h3><p style="color:#64748b;margin-bottom:1.5rem;">"Les 5 erreurs qui ruinent votre piscine" — offert !</p><form id="lead-form"><input type="hidden" name="sujet" value="Newsletter - Guide gratuit"><input type="email" name="email" placeholder="Votre email" required style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:10px;margin-bottom:1rem;font-size:1rem;"><button type="submit" class="btn btn-blue btn-block" id="lead-submit"><i class="fas fa-download"></i> Recevoir le guide</button></form><p style="font-size:0.75rem;color:#94a3b8;margin-top:0.75rem;" id="lead-status">Votre email ne sera jamais partagé. Désabonnez-vous à tout moment.</p></div></div>';
@@ -25,10 +26,10 @@
           headers: { 'Accept': 'application/json' }
         }).then(function(r) {
           if (r.ok) {
-            status.textContent = 'Merci ! Votre guide va vous être envoyé par email.';
+            status.textContent = 'Merci ! Redirection vers votre guide...';
             status.style.color = '#10b981';
             submitBtn.innerHTML = '<i class="fas fa-check"></i> Envoyé !';
-            setTimeout(closeLead, 2000);
+            setTimeout(function() { window.location.href = 'free-guide.html'; }, 1000);
           } else {
             throw new Error('Erreur');
           }

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: pool-academy-api
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PAYPAL_CLIENT_ID
+        value: AY9HXafcPHStF8HwHiwdJ1OyRDSC739naTxvTnA_PbjIZXa4hF2Acb3735u7zgST8zok7jCcaMBkKtQN
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_ORIGIN
+        value: https://tachihant.github.io
+      - key: PAYPAL_MODE
+        value: live

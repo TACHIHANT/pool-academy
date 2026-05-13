@@ -115,21 +115,52 @@
     </div>
   </footer>
 
+  <script src="js/config.js"></script>
   <script src="js/main.js"></script>
   <script src="js/produits.js"></script>
   <script src="js/network.js"></script>
   <script>
-    const purchased = JSON.parse(localStorage.getItem('pool-purchased') || '[]');
+    const apiUrl = typeof BACKEND_URL !== 'undefined' ? BACKEND_URL : '';
+    const urlParams = new URLSearchParams(window.location.search);
+    const tokenFromUrl = urlParams.get('token');
+    const token = tokenFromUrl || localStorage.getItem('pool-token') || '';
     localStorage.removeItem('pool-cart');
-    localStorage.removeItem('pool-purchased');
-    updateCartCount([]);
-    const container = document.getElementById('download-links');
-    if (container && purchased.length) {
-      container.innerHTML = purchased.map(id => {
+
+    function showDownloads(productIds) {
+      const container = document.getElementById('download-links');
+      if (!container || !productIds || !productIds.length) return;
+      container.innerHTML = productIds.map(function(id) {
         const p = getProductById(id);
         if (!p) return '';
-        return `<a href="ebooks/${p.slug}/${p.slug}.pdf" class="btn btn-outline" style="border-color:#0ea5e9;color:#0ea5e9;justify-content:center;" target="_blank"><i class="fas fa-download"></i> ${p.titre}</a>`;
+        return '<a href="ebooks/' + p.slug + '/' + p.slug + '.pdf" class="btn btn-outline" style="border-color:#0ea5e9;color:#0ea5e9;justify-content:center;" target="_blank"><i class="fas fa-download"></i> ' + p.titre + '</a>';
       }).join('');
+    }
+
+    function fallback() {
+      const purchased = JSON.parse(localStorage.getItem('pool-purchased') || '[]');
+      localStorage.removeItem('pool-purchased');
+      localStorage.removeItem('pool-token');
+      updateCartCount([]);
+      showDownloads(purchased);
+    }
+
+    if (token && apiUrl) {
+      fetch(apiUrl + '/api/verify-token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: token }),
+      }).then(function(r) { return r.json(); }).then(function(result) {
+        localStorage.removeItem('pool-purchased');
+        localStorage.removeItem('pool-token');
+        updateCartCount([]);
+        if (result.valid && result.productIds) {
+          showDownloads(result.productIds);
+        } else {
+          document.getElementById('download-links').innerHTML = '<p style="color:#ef4444;">Lien de téléchargement invalide ou expiré. Contactez-nous si vous avez déjà payé.</p>';
+        }
+      }).catch(function() { fallback(); });
+    } else {
+      fallback();
     }
   </script>
 </body>
