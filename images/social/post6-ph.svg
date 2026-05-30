@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bgPH" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="blueGradPH" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgPH)"/>
+
+  <!-- Top bar -->
+  <rect width="1080" height="6" fill="#0ea5e9"/>
+
+  <!-- Logo -->
+  <text x="540" y="70" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#0ea5e9">🌊 Pool Academy</text>
+
+  <!-- Title -->
+  <text x="540" y="140" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800" fill="#0f172a">Le pH idéal pour votre piscine</text>
+  <text x="540" y="190" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#64748b">Le geste le plus important pour une eau saine</text>
+
+  <!-- pH Gauge -->
+  <!-- Background bar -->
+  <rect x="140" y="280" width="800" height="60" rx="30" fill="#e2e8f0"/>
+
+  <!-- Low pH (red) -->
+  <rect x="140" y="280" width="200" height="60" rx="30" fill="url(#redGrad)"/>
+  <rect x="340" y="280" width="40" height="60" fill="url(#redGrad)"/>
+
+  <!-- Ideal pH (green) -->
+  <rect x="380" y="280" width="200" height="60" fill="url(#greenGrad)"/>
+
+  <!-- High pH (blue) -->
+  <rect x="580" y="280" width="40" height="60" fill="url(#blueGradPH)"/>
+  <rect x="620" y="280" width="200" height="60" rx="30" fill="url(#blueGradPH)"/>
+
+  <!-- Labels on bar -->
+  <text x="240" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">&lt; 7.0</text>
+  <text x="480" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#fff">7.0 — 7.4</text>
+  <text x="710" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">&gt; 7.4</text>
+
+  <!-- Labels below bar -->
+  <text x="240" y="380" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#dc2626">Trop acide</text>
+  <text x="480" y="380" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#16a34a">IDÉAL ✅</text>
+  <text x="710" y="380" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#0284c7">Trop basique</text>
+
+  <!-- Why pH matters -->
+  <rect x="140" y="440" width="800" height="2" rx="1" fill="#e2e8f0"/>
+
+  <text x="540" y="490" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">📊 Pourquoi le pH est crucial ?</text>
+
+  <!-- Fact cards -->
+  <rect x="140" y="530" width="240" height="100" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="260" y="570" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" fill="#0ea5e9">70%</text>
+  <text x="260" y="600" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#64748b">du chlore inefficace</text>
+  <text x="260" y="618" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#64748b">si pH mal réglé</text>
+
+  <rect x="420" y="530" width="240" height="100" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="540" y="570" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" fill="#0ea5e9">2-3×</text>
+  <text x="540" y="600" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#64748b">par semaine en été</text>
+  <text x="540" y="618" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#64748b">fréquence de test</text>
+
+  <rect x="700" y="530" width="240" height="100" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="820" y="570" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" fill="#0ea5e9">7.2</text>
+  <text x="820" y="600" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#64748b">valeur idéale</text>
+  <text x="820" y="618" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#64748b">pour la baignade</text>
+
+  <!-- Tips -->
+  <rect x="140" y="670" width="800" height="100" rx="16" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+  <text x="180" y="705" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0369a1">💡 Comment ajuster ?</text>
+  <text x="180" y="735" font-family="Inter, Arial, sans-serif" font-size="16" fill="#0c4a6e">pH trop haut → ajoutez du <tspan font-weight="700">pH moins</tspan> (acide)</text>
+  <text x="180" y="758" font-family="Inter, Arial, sans-serif" font-size="16" fill="#0c4a6e">pH trop bas → ajoutez du <tspan font-weight="700">pH plus</tspan> (base)</text>
+
+  <!-- CTA -->
+  <rect x="290" y="810" width="500" height="60" rx="30" fill="#0ea5e9"/>
+  <text x="540" y="848" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">📘 Guide complet dans notre ebook</text>
+
+  <!-- Bottom -->
+  <text x="540" y="920" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#94a3b8">Pool Academy — Des guides PDF pour l'entretien de votre piscine</text>
+
+  <!-- Hashtags -->
+  <text x="540" y="970" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#0ea5e9">#pH #Piscine #TraitementEau #PoolAcademy</text>
+</svg>

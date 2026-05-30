@@ -76,6 +76,7 @@ app.post('/api/verify-order', async (req, res) => {
       if (i.name.toLowerCase().includes('solutions') || i.name.toLowerCase().includes('problemes')) return 2;
       if (i.name.toLowerCase().includes('entretien') || i.name.toLowerCase().includes('saisonnier')) return 3;
       if (i.name.toLowerCase().includes('equipements')) return 4;
+      if (i.name.toLowerCase().includes('sel') || i.name.toLowerCase().includes('electrolyseur')) return 5;
       return null;
     }).filter(Boolean);
 

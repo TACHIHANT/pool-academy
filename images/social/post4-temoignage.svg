@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bgTesti" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgTesti)"/>
+
+  <!-- Decorative water effect -->
+  <circle cx="900" cy="200" r="300" fill="#0ea5e9" opacity="0.08"/>
+  <circle cx="200" cy="800" r="250" fill="#0284c7" opacity="0.06"/>
+
+  <!-- Top bar -->
+  <rect width="1080" height="6" fill="#0ea5e9"/>
+
+  <!-- Logo -->
+  <text x="540" y="70" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#0ea5e9">🌊 Pool Academy</text>
+
+  <!-- Stars -->
+  <text x="540" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="48">⭐⭐⭐⭐⭐</text>
+
+  <!-- Quote mark -->
+  <text x="540" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="100" fill="#0ea5e9" opacity="0.4">"</text>
+
+  <!-- Quote text -->
+  <text x="540" y="420" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="600" fill="#f1f5f9">Le guide des problèmes</text>
+  <text x="540" y="475" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="600" fill="#f1f5f9">courants m'a sauvé !</text>
+
+  <text x="540" y="560" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" fill="#94a3b8">J'ai pu traiter l'eau verte de</text>
+  <text x="540" y="600" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" fill="#94a3b8">ma piscine en 48h.</text>
+
+  <!-- Author -->
+  <text x="540" y="700" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#0ea5e9">— Thomas L.</text>
+
+  <!-- Divider -->
+  <rect x="440" y="740" width="200" height="3" rx="1.5" fill="#334155"/>
+
+  <!-- Social proof -->
+  <text x="540" y="800" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#64748b">+50 propriétaires de piscine nous font confiance</text>
+
+  <!-- CTA -->
+  <rect x="290" y="860" width="500" height="60" rx="30" fill="#0ea5e9"/>
+  <text x="540" y="898" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">📘 Découvrir nos guides</text>
+
+  <!-- Trust badges -->
+  <text x="320" y="960" font-family="Inter, Arial, sans-serif" font-size="16" fill="#64748b">💳 Paiement sécurisé PayPal</text>
+  <text x="660" y="960" font-family="Inter, Arial, sans-serif" font-size="16" fill="#64748b">🎯 Satisfait ou remboursé</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bgPromo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgPromo)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="200" fill="#fff" opacity="0.05"/>
+  <circle cx="980" cy="900" r="250" fill="#fff" opacity="0.05"/>
+  <circle cx="900" cy="200" r="120" fill="#fff" opacity="0.05"/>
+
+  <!-- Fire emoji -->
+  <text x="540" y="120" text-anchor="middle" font-size="64">🔥</text>
+
+  <!-- Main headline -->
+  <text x="540" y="210" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" fill="#fef2f2">PROMO LANCEMENT</text>
+
+  <!-- -20% big -->
+  <text x="540" y="380" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="160" font-weight="900" fill="#fbbf24">-20%</text>
+
+  <!-- Code -->
+  <rect x="340" y="430" width="400" height="60" rx="12" fill="#fff" opacity="0.15"/>
+  <text x="540" y="470" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="#fff">CODE : POOL20</text>
+
+  <!-- Products list -->
+  <rect x="80" y="540" width="920" height="4" rx="2" fill="#fff" opacity="0.2"/>
+
+  <text x="540" y="590" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#fef2f2">📘 Guide Traitement de l'Eau</text>
+  <text x="540" y="620" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#fca5a5">14,99 € → 11,99 €</text>
+
+  <text x="540" y="670" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#fef2f2">📘 Solutions Problèmes Courants</text>
+  <text x="540" y="700" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#fca5a5">12,99 € → 10,39 €</text>
+
+  <text x="540" y="750" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#fef2f2">📘 Guide Piscine au Sel &amp; Électrolyseur</text>
+  <text x="540" y="780" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#fca5a5">13,99 € → 11,19 €</text>
+
+  <!-- Bonus -->
+  <rect x="200" y="830" width="680" height="50" rx="12" fill="url(#goldGrad)"/>
+  <text x="540" y="862" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#78350f">🎁 BONUS : Guide gratuit "5 erreurs" offert</text>
+
+  <!-- CTA -->
+  <rect x="290" y="920" width="500" height="60" rx="30" fill="#fff"/>
+  <text x="540" y="958" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#dc2626">🛒 J'EN PROFITE</text>
+
+  <!-- Bottom -->
+  <text x="540" y="1030" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#fca5a5">Téléchargement immédiat • Paiement PayPal sécurisé</text>
+  <text x="540" y="1055" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#fca5a5">Garantie satisfait ou remboursé 14 jours</text>
+</svg>

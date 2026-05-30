@@ -226,6 +226,20 @@ footer a:hover { color: #0ea5e9; }
 .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #0ea5e9; }
 .form-group textarea { min-height: 140px; resize: vertical; }
 
+/* === PROMO BAR === */
+.promo-bar { background: #0ea5e9; color: #fff; text-align: center; padding: 0.4rem 1rem; font-size: 0.8rem; font-weight: 500; }
+.promo-bar strong { color: #fbbf24; }
+
+/* === TRUST BADGES === */
+.trust-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.75rem; font-weight: 500; }
+.trust-badge-paypal { background: #1e293b; color: #94a3b8; }
+.trust-badge-secure { background: #1e293b; color: #94a3b8; }
+.trust-badge-guarantee { background: #1e293b; color: #94a3b8; }
+
+/* === URGENCY === */
+.stock-bar { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #dc2626; margin: 1rem 0; }
+.stock-bar i { font-size: 1rem; }
+
 /* === NOTIFICATION === */
 .notification {
   position: fixed; top: 20px; right: 20px; z-index: 1000;

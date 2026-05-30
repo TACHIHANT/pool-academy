@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   container.innerHTML = `
     <div class="product-detail">
       <div>
-        <img class="product-detail-cover" src="${product.image}" alt="${product.titre}">
+        <img class="product-detail-cover" src="${product.image}" alt="${product.titre} — Guide PDF Pool Academy" width="400" height="560">
         <div style="text-align:center;margin-top:0.5rem;color:#64748b;font-size:0.9rem;">${product.pages} pages • ${product.format}</div>
       </div>
       <div class="product-detail-info">
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="products-grid">
           ${related.map(p => `
             <div class="product-card" onclick="window.location='produit.html?id=${p.id}'">
-              <img class="product-card-img" src="${p.image}" alt="${p.titre}" loading="lazy">
+              <img class="product-card-img" src="${p.image}" alt="${p.titre} — Guide PDF Pool Academy" loading="lazy">
               <div class="product-card-body">
                 <h3>${p.titre}</h3>
                 <p class="desc">${p.description}</p>

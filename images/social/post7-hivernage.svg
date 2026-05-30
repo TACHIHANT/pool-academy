@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bgHiver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="blueGradH" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgHiver)"/>
+
+  <!-- Top bar -->
+  <rect width="1080" height="6" fill="#0ea5e9"/>
+
+  <!-- Snowflake decorations -->
+  <text x="80" y="120" font-size="40" opacity="0.2">❄️</text>
+  <text x="950" y="200" font-size="50" opacity="0.2">❄️</text>
+  <text x="100" y="900" font-size="60" opacity="0.15">❄️</text>
+
+  <!-- Logo -->
+  <text x="540" y="70" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#0ea5e9">🌊 Pool Academy</text>
+
+  <!-- Title -->
+  <text x="540" y="150" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" fill="#0f172a">❄️ Checklist Hivernage</text>
+  <text x="540" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#64748b">Préparez votre piscine pour l'hiver en 7 étapes</text>
+
+  <!-- Checklist items -->
+  <rect x="140" y="260" width="800" height="80" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="160" y="285" width="30" height="30" rx="6" fill="#10b981"/>
+  <text x="175" y="306" text-anchor="middle" font-size="18" fill="#fff">✓</text>
+  <text x="220" y="310" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#0f172a">Nettoyer le bassin</text>
+
+  <rect x="140" y="360" width="800" height="80" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="160" y="385" width="30" height="30" rx="6" fill="#10b981"/>
+  <text x="175" y="406" text-anchor="middle" font-size="18" fill="#fff">✓</text>
+  <text x="220" y="410" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#0f172a">Ajuster le pH (7.0 - 7.2)</text>
+
+  <rect x="140" y="460" width="800" height="80" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="160" y="485" width="30" height="30" rx="6" fill="#10b981"/>
+  <text x="175" y="506" text-anchor="middle" font-size="18" fill="#fff">✓</text>
+  <text x="220" y="510" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#0f172a">Traitement choc</text>
+
+  <rect x="140" y="560" width="800" height="80" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="160" y="585" width="30" height="30" rx="6" fill="#10b981"/>
+  <text x="175" y="606" text-anchor="middle" font-size="18" fill="#fff">✓</text>
+  <text x="220" y="610" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#0f172a">Produit d'hivernage spécifique</text>
+
+  <rect x="140" y="660" width="800" height="80" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="160" y="685" width="30" height="30" rx="6" fill="#10b981"/>
+  <text x="175" y="706" text-anchor="middle" font-size="18" fill="#fff">✓</text>
+  <text x="220" y="710" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#0f172a">Protéger la pompe et le filtre</text>
+
+  <rect x="140" y="760" width="800" height="80" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="160" y="785" width="30" height="30" rx="6" fill="#10b981"/>
+  <text x="175" y="806" text-anchor="middle" font-size="18" fill="#fff">✓</text>
+  <text x="220" y="810" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#0f172a">Bâche d'hivernage renforcée</text>
+
+  <rect x="140" y="860" width="800" height="80" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="160" y="885" width="30" height="30" rx="6" fill="#10b981"/>
+  <text x="175" y="906" text-anchor="middle" font-size="18" fill="#fff">✓</text>
+  <text x="220" y="910" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#0f172a">Flotteurs anti-gel</text>
+
+  <!-- CTA -->
+  <rect x="290" y="970" width="500" height="55" rx="28" fill="url(#blueGradH)"/>
+  <text x="540" y="1005" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">📘 Guide complet dans notre ebook</text>
+
+  <!-- Bottom watermark -->
+  <text x="540" y="1060" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#94a3b8">Pool Academy — Des guides PDF experts pour votre piscine</text>
+</svg>

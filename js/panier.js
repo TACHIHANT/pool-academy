@@ -67,7 +67,7 @@ function renderCartPage() {
     if (!p) return;
     itemsHtml += `
       <div class="cart-item">
-        <img class="cart-item-cover" src="${p.image}" alt="${p.titre}">
+        <img class="cart-item-cover" src="${p.image}" alt="${p.titre} — Pool Academy" width="80" height="80" loading="lazy">
         <div class="cart-item-info">
           <h4>${p.titre}</h4>
           <div class="price">${p.prix.toFixed(2)} €</div>
