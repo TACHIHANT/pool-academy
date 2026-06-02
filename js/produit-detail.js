@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     "@type": "Product",
     "name": product.titre,
     "description": product.description,
-    "image": "https://tachihant.github.io/pool-academy/" + product.image,
+    "image": "https://poolacademy.site/" + product.image,
     "offers": { "@type": "Offer", "price": product.prix.toFixed(2), "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
   });
   document.head.appendChild(productSchema);
   const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.href = 'https://tachihant.github.io/pool-academy/produit.html?id=' + product.id;
+  if (canonical) canonical.href = 'https://poolacademy.site/produit.html?id=' + product.id;
   if (typeof fbq !== 'undefined') {
     fbq('track', 'ViewContent', {content_name: product.titre, content_ids: [product.id], content_type: 'product', value: product.prix, currency: 'EUR'});
   }
