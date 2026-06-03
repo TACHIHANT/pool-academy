@@ -94,5 +94,18 @@
 
   <script src="js/produits.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof ttq !== 'undefined') {
+      ttq.track('ViewContent', {
+        content_id: '45902942175289',
+        content_type: 'product',
+        content_name: 'Digital Solar Pool Thermometer',
+        price: 39.99,
+        currency: 'USD'
+      });
+    }
+  });
+  </script>
 </body>
 </html>
