@@ -30,7 +30,7 @@
     "name": "Pool Shop Products",
     "description": "Premium solar pool products with free US shipping",
     "url": "https://poolacademy.site/boutique.html",
-    "numberOfItems": 2,
+    "numberOfItems": 3,
     "itemListElement": [{
       "@type": "ListItem",
       "position": 1,
@@ -71,6 +71,26 @@
           }
         },
         "image": "https://poolacademy.site/images/pool-led-light.png"
+      }
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Solar Power Fountain — Floating Water Pump",
+        "description": "Solar-powered floating fountain pump for bird baths, ponds, and garden pools. 6 spray nozzles, 180L/H flow.",
+        "brand": "PoolProUS",
+        "offers": {
+          "@type": "Offer",
+          "price": "19.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetail",
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" }
+          }
+        },
+        "image": "https://poolacademy.site/images/pool-solar-fountain.png"
       }
     }]
   }
@@ -122,6 +142,18 @@
             </a>
           </div>
         </div>
+        <div class="product-card">
+          <img class="product-card-img" src="images/pool-solar-fountain.png" alt="Solar Power Fountain">
+          <div class="product-card-body">
+            <span class="badge">Free Shipping</span>
+            <h3>Solar Power Fountain</h3>
+            <p class="desc">Solar-powered floating water pump for bird baths, ponds & pools. 6 spray nozzles, 180L/h flow. Ships from US.</p>
+            <div class="price">$19.99</div>
+            <a href="https://store.poolacademy.site/b/Li0hR?utm_source=tiktok&utm_medium=social&utm_campaign=poolacademy" target="_blank" class="btn btn-blue btn-sm btn-block">
+              <i class="fas fa-shopping-cart"></i> Buy Now
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -161,12 +193,18 @@
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     if (typeof ttq !== 'undefined') {
-      ttq.track('ViewContent', {
-        content_id: '45902942175289',
-        content_type: 'product',
-        content_name: 'Digital Solar Pool Thermometer',
-        price: 39.99,
-        currency: 'USD'
+      var products = [
+        { id: '45902942175289', name: 'Digital Solar Pool Thermometer', price: 39.99 },
+        { id: 'CJJT242159201AZ', name: 'Solar Power Fountain', price: 19.99 }
+      ];
+      products.forEach(function(p) {
+        ttq.track('ViewContent', {
+          content_id: p.id,
+          content_type: 'product',
+          content_name: p.name,
+          price: p.price,
+          currency: 'USD'
+        });
       });
     }
   });
