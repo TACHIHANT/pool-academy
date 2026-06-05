@@ -9,8 +9,7 @@ $font = "C\:/Windows/Fonts/arialbd.ttf"
 $videos = @(
   "C:\Users\khali\OneDrive\Desktop\tiktok-videos\pool-blue-waves.mp4",
   "C:\Users\khali\OneDrive\Desktop\tiktok-videos\pool-splash-vertical.mp4",
-  "C:\Users\khali\OneDrive\Desktop\tiktok-videos\pool-aerial-water.mp4",
-  "C:\Users\khali\OneDrive\Desktop\tiktok-videos\pool-water-texture.mp4"
+  "C:\Users\khali\OneDrive\Desktop\tiktok-videos\pool-underwater-waves.mp4"
 )
 $photos = "C:\Users\khali\OneDrive\Desktop\payhip photo"
 $output = "C:\Users\khali\OneDrive\Desktop\tiktok-videos"
@@ -18,19 +17,17 @@ $products = @()
 
 if ($Product -in @("all","thermometer")) {
   $products += @{
-    name = "Thermometer"
+    name = "thermometer"
     title = "Digital Pool Thermometer"
     features = @("Solar powered", "No batteries", "Waterproof LCD", "Accurate reading")
     hashtag = "#poolthermometer #poolmaintenance #poolusa"
-    images = @(
-      "$photos\2c420f424a928460687cd2a09e48.jpeg"
-    )
+    images = @("$photos\2c420f424a928460687cd2a09e48.jpeg")
     price = "24.99"
   }
 }
 if ($Product -in @("all","led")) {
   $products += @{
-    name = "LED"
+    name = "led"
     title = "Solar LED Pool Light"
     features = @("No wiring", "No electricity", "Changes colors", "Auto on/off")
     hashtag = "#poollights #solarpool #backyardideas #poolusa #california"
@@ -46,7 +43,7 @@ if ($Product -in @("all","led")) {
 }
 if ($Product -in @("all","fountain")) {
   $products += @{
-    name = "Fountain"
+    name = "fountain"
     title = "Solar Power Fountain"
     features = @("6 spray nozzles", "180L/H flow", "No batteries", "Bird bath ready")
     hashtag = "#solarfountain #gardenideas #backyard #poolusa"
@@ -59,26 +56,27 @@ if ($Product -in @("all","fountain")) {
   }
 }
 
-$texts = @("STOP SCROLLING", "Want this for your pool?", "TAP LINK IN BIO")
-$colors = @("white", "white", "yellow")
-
 foreach ($p in $products) {
   Write-Host "=== Generating video for $($p.name) ===" -ForegroundColor Green
   $bg = $videos | Get-Random
-  $out = "$output\$($p.name.ToLower())-ad-vertical.mp4"
-  $duration = [math]::Min(15, 3 + $p.images.Count * 3 + 2)
-  $images = $p.images
+  $out = "$output\$($p.name)-ad-vertical.mp4"
+  $imgCount = $p.images.Count
+  $duration = [math]::Min(15, 2 + $imgCount * 3 + 2)
+  $segDuration = [math]::Max(2.5, ($duration - 4) / $imgCount)
+
+  $argsList = @("-y")
+  $argsList += "-i"; $argsList += $bg
+  foreach ($img in $p.images) { $argsList += "-i"; $argsList += $img }
+  $argsList += "-t"; $argsList += "$duration"
 
   $filter = "[0:v]trim=0:$duration,setpts=PTS-STARTPTS,scale=720:1280[bg];"
   $chain = "bg"
   $i = 1
-  $segDuration = [math]::Max(2.5, ($duration - 5) / $images.Count)
-
-  foreach ($img in $images) {
+  foreach ($img in $p.images) {
     $filter += "[$i:v]scale=500:500,setsar=1[img$i];"
-    $start = 1.5 + ($i-1) * $segDuration
-    $end = $start + $segDuration
-    if ($i -le ($images.Count - 1)) { $end = [math]::Min($end, $start + $segDuration - 0.5) }
+    $start = [math]::Round(1.5 + ($i-1) * $segDuration, 1)
+    $end = [math]::Round($start + $segDuration, 1)
+    if ($i -eq $imgCount) { $end = [math]::Min($end, $duration - 1.5) }
     $filter += "[$chain][img$i]overlay=(W-w)/2:(H-h)/2-30:enable='between(t,$start,$end)'[v$i];"
     $chain = "v$i"
     $i++
@@ -90,24 +88,30 @@ foreach ($p in $products) {
   $drawtexts += "drawtext=fontfile=$font:text='TAP LINK IN BIO':fontsize=48:fontcolor=yellow:x=(w-text_w)/2:y=(h-text_h)/2:enable='between(t,$($duration-2),$duration)'"
 
   $fIdx = 0
-  $featDuration = [math]::Max(2, ($duration - 4) / [math]::Max(1, $p.features.Count))
+  $featDuration = [math]::Max(2, ($duration - 4) / $p.features.Count)
   foreach ($feat in $p.features) {
-    $fStart = 2 + $fIdx * $featDuration
+    $fStart = [math]::Round(2 + $fIdx * $featDuration, 1)
     $fEnd = [math]::Min($fStart + $featDuration, $duration - 2)
     $yPos = 200 + $fIdx * 60
-    if ($yPos -gt 600) { $yPos = 600 - ($fIdx * 10) }
     $drawtexts += "drawtext=fontfile=$font:text='$feat':fontsize=26:fontcolor=white:x=(w-text_w)/2:y=$yPos:enable='between(t,$fStart,$fEnd)'"
     $fIdx++
   }
+  $filter += "[$chain]" + ($drawtexts -join ",")
+  $argsList += "-filter_complex"; $argsList += $filter
+  $argsList += $out
 
-  $filterText = $drawtexts -join ","
-  $cmd = "& `"$ffmpeg`" -y -i `"$bg`" " + ($images | ForEach-Object { "-i `"$_`"" }) -join " " + " -t $duration -filter_complex `"$filter[$chain]$filterText`" `"$out`" 2>&1"
-  Invoke-Expression $cmd | Out-Null
-  Write-Host "  ✅ Created: $out" -ForegroundColor Cyan
-  Write-Host "  📝 Description:" -ForegroundColor Yellow
-  Write-Host "    Want to upgrade your pool? Check out the $($p.title)!" -ForegroundColor White
-  Write-Host "    🔗 Link in bio" -ForegroundColor White
-  Write-Host "    $($p.hashtag)" -ForegroundColor White
+  Write-Host "  Generating..." -ForegroundColor DarkGray
+  & $ffmpeg $argsList 2>&1 | Out-Null
+
+  if (Test-Path $out) {
+    Write-Host "  ✅ Created: $out" -ForegroundColor Cyan
+    Write-Host "  📝 Post on TikTok with:" -ForegroundColor Yellow
+    Write-Host "    Want to upgrade your pool? Check out the $($p.title)!" 
+    Write-Host "    🔗 Link in bio"
+    Write-Host "    $($p.hashtag)"
+  } else {
+    Write-Host "  ❌ Failed to create video" -ForegroundColor Red
+  }
   Write-Host ""
 }
 
